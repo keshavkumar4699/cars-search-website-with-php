@@ -1,30 +1,85 @@
-// banner
-$carousel-control-color:             $white;
-$carousel-control-width:             15%; 
-$carousel-control-opacity:           .5;
-$carousel-control-hover-opacity:     .9;
-$carousel-control-transition:        opacity .15s ease;
+#logo-image {
+  height: 30px;
+  width: auto;
+}
+#logo-text {
+  font-weight: 600;
+}
 
-$carousel-indicator-width:           30px;
-$carousel-indicator-height:          3px;
-$carousel-indicator-hit-area-height: 10px;
-$carousel-indicator-spacer:          3px;
-$carousel-indicator-opacity:         .5;
-$carousel-indicator-active-bg:       $white;
-$carousel-indicator-active-opacity:  1;
-$carousel-indicator-transition:      opacity .6s ease;
+@media only screen and (min-width: 992px) {
+  #header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
 
-$carousel-caption-width:             70%;
-$carousel-caption-color:             $white;
-$carousel-caption-padding-y:         1.25rem;
-$carousel-caption-spacer:            1.25rem;
+#banner {
+  #carouselExampleIndicators {
+    height: 100vh;
+  }
+  #banner-form {
+    background-color: white;
+    margin: 20px;
+    box-shadow: 0px 0px 10px gray;
+    padding: 30px;
+    border-radius: 10px;
+  }
+  img {
+    opacity: 80%;
+    height: 100vh;
+    object-fit: cover;
+  }
+}
 
-$carousel-control-icon-width:        2rem;
+@media only screen and (min-width: 992px) {
+  #banner-form {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    height: 85vh;
+    width: 40vw;
+    box-shadow: 0px 0px 10px gray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
 
-$carousel-control-prev-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
-$carousel-control-next-icon-bg:      url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$carousel-control-color}'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+.display_slider {
+  margin: 20px;
+  border-radius: 10px 10px 10px 2px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px gray;
+  overflow: auto;
+  .slider_section {
+    display: flex;
+    width: min-content;
+    gap: 20px;
+  }
+}
 
-$carousel-transition-duration:       .6s;
-$carousel-transition:                transform $carousel-transition-duration ease-in-out; // Define transform transition first if using multiple transitions (e.g., `transform 2s ease, opacity .5s ease-out`)
+::-webkit-scrollbar {
+  height: 10px; /* height of horizontal scrollbar ← You're missing this */
+  width: 15px; /* width of vertical scrollbar */
+  border: 1px solid #d5d5d5;
+}
 
-$card-height: 200px;
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #eeeeee;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #b0b0b0;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}
+
+$utilities: ();

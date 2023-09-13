@@ -1,59 +1,83 @@
-/*# sourceMappingURL=index.css.map */
-.body {
+@charset "UTF-8";
+#logo-image {
+  height: 30px;
+  width: auto;
 }
-#carouselExampleIndicators {
+
+#logo-text {
+  font-weight: 600;
 }
-#carouselExampleIndicators img {
+
+@media only screen and (min-width: 992px) {
+  #header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+#banner #carouselExampleIndicators {
   height: 100vh;
-  opacity: 80%;
-  object-fit: cover;
 }
-#banner-form {
+#banner #banner-form {
   background-color: white;
-  padding: 30px;
-  height: 84vh;
-  width: 40vw;
-  position: absolute;
-  top: 20vh;
-  left: 10vw;
-  z-index: 1;
-  border-radius: 10px;
-}
-
-#Address {
-  margin-bottom: 0;
-}
-
-.display_slider{
   margin: 20px;
-  padding: 15px;
-  box-shadow: 0px 0px 10px darkgray ;
+  box-shadow: 0px 0px 10px gray;
+  padding: 30px;
   border-radius: 10px;
 }
+#banner img {
+  opacity: 80%;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
-.slider_section {
+@media only screen and (min-width: 992px) {
+  #banner-form {
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    height: 85vh;
+    width: 40vw;
+    box-shadow: 0px 0px 10px gray;
+    padding: 20px;
+    border-radius: 10px;
+  }
+}
+.display_slider {
+  margin: 20px;
+  border-radius: 10px 10px 10px 2px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px gray;
+  overflow: auto;
+}
+.display_slider .slider_section {
   display: flex;
-  flex-direction: row;
-  overflow-x: scroll;
-  flex: 1;
-  gap: 10px;
+  width: -moz-min-content;
+  width: min-content;
+  gap: 20px;
 }
 
-.car-card{
-  display: flex;
-  min-width: min-content;
+::-webkit-scrollbar {
+  height: 10px; /* height of horizontal scrollbar ← You're missing this */
+  width: 15px; /* width of vertical scrollbar */
+  border: 1px solid #d5d5d5;
 }
 
-.display_slider h4{
-  margin-bottom: 15px;
+::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: #eeeeee;
 }
 
-#car-name{
-  font-weight: 500;
-  font-size: medium;
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background: #b0b0b0;
+  border-radius: 2px;
 }
 
-#car-price{
-  font-weight: 700;
-  font-size: large;
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
+
+::-webkit-scrollbar-corner {
+  border-radius: 10px;
+}/*# sourceMappingURL=index.css.map */
