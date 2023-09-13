@@ -1,0 +1,59 @@
+/*# sourceMappingURL=index.css.map */
+.body {
+}
+#carouselExampleIndicators {
+}
+#carouselExampleIndicators img {
+  height: 100vh;
+  opacity: 80%;
+  object-fit: cover;
+}
+#banner-form {
+  background-color: white;
+  padding: 30px;
+  height: 84vh;
+  width: 40vw;
+  position: absolute;
+  top: 20vh;
+  left: 10vw;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+#Address {
+  margin-bottom: 0;
+}
+
+.display_slider{
+  margin: 20px;
+  padding: 15px;
+  box-shadow: 0px 0px 10px darkgray ;
+  border-radius: 10px;
+}
+
+.slider_section {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  flex: 1;
+  gap: 10px;
+}
+
+.car-card{
+  display: flex;
+  min-width: min-content;
+}
+
+.display_slider h4{
+  margin-bottom: 15px;
+}
+
+#car-name{
+  font-weight: 500;
+  font-size: medium;
+}
+
+#car-price{
+  font-weight: 700;
+  font-size: large;
+}
