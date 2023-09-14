@@ -38,35 +38,35 @@
         <div class="row mb-3">
           <label for="name" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="name" name="name">
+            <input type="text" class="form-control" id="name" name="name" required>
           </div>
         </div>
         <div class="row mb-3">
           <label for="phone" class="col-sm-2 col-form-label">Phone</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="phone" name="phone">
+            <input type="text" class="form-control" id="phone" name="phone" required>
           </div>
         </div>
         <div class="row mb-3">
           <label for="email" class="col-sm-2 col-form-label">Email</label>
           <div class="col-sm-10">
-            <input type="email" class="form-control" id="email" name="email">
+            <input type="email" class="form-control" id="email" name="email" required>
           </div>
         </div>
         <div class="row mb-3" id="Address">
           <label for="address" class="col-sm-2 col-form-label">Address</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" required>
           </div>
         </div>
         <div class="row g-3">
           <div class="col-md-6">
             <label for="city" class="form-label">City</label>
-            <input type="text" class="form-control" id="city" name="city">
+            <input type="text" class="form-control" id="city" name="city" required>
           </div>
           <div class="col-md-4">
             <label for="state" class="form-label">State</label>
-            <select id="state" name="state" class="form-select">
+            <select id="state" name="state" class="form-select" required>
               <option selected>Choose...</option>
               <option value="delhi">Delhi</option>
               <option value="mumbai">Mumbai</option>
@@ -75,7 +75,7 @@
           </div>
           <div class="col-md-2">
             <label for="zip" class="form-label">Zip</label>
-            <input type="text" class="form-control" id="zip" name="zip">
+            <input type="text" class="form-control" id="zip" name="zip" required>
           </div>
         </div>
         <fieldset class="row mb-3">
