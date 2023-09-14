@@ -17,8 +17,8 @@ include('./admin_config/connect.php');
 <body>
   <h3 class="text-center mt-5">Upload new most searched Car</h3>
   <div class="container mt-5 text-center">
-    <form >
-      <?php include('./admin_views/add-new-car.php') ?>
+    <form action="./admin_models/add-mostsearched.php" method="post" enctype="multipart/form-data">
+      <?php include('./admin_views/_add-new-car.php') ?>
     </form>
   </div>
   <div>
@@ -34,14 +34,25 @@ include('./admin_config/connect.php');
         </tr>
       </thead>
       <tbody>
-        <?php
-
-        return '<tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>'
+      <?php
+          include('./admin_config/connect.php');
+          $sql = "select * from tb_most_searched_cars";
+          $result = mysqli_query($con, $sql);
+          while($row=mysqli_fetch_assoc($result)){
+            $id=$row['id'];
+            $name=$row['carName'];
+            $price=$row['price'];
+            $category=$row['category'];
+            $image=$row['image'];
+            echo '<tr>
+              <th scope="row">'.$id.'</th>
+              <td>'.$name.'</td>
+              <td>'.$price.'</td>
+              <td>'.$category.'</td>
+              <td><img class="h-25 w-25" src=./resources/'.$image.' alt='.$image.'/></td>
+              <td><a href="./admin_models/delete-mostsearched.php?deleteid='.$id.'" class="btn btn-danger">Delete</a></td>
+            </tr>';
+          }
         ?>
       </tbody>
     </table>

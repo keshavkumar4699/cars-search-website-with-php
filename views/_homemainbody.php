@@ -17,9 +17,9 @@
         $image = $row['image'];
         echo '
             <div class="carousel-item active">
-              <img src=./admin/admin_models/'.$image.' alt='.$image.' class="d-block w-100">
+              <img src=./admin/admin_models/' . $image . ' alt=' . $image . ' class="d-block w-100">
             </div>';
-        }
+      }
       ?>
       <!-- <div class="carousel-item active">
         <img src="./resources/images/banner_images/banner_1.jpg" class="d-block w-100" alt="...">
@@ -118,32 +118,52 @@
   <h4>Most Searched Cars</h4>
   <div class="slider_section">
     <?php
-    for ($x = 0; $x <= 6; $x++) { ?>
-      <div class="card car-card" style="width: 15rem;">
-        <img src="./resources/images/latest_cars/car_1.jpg" class="card-img-top" alt="car 1">
+    include('./config/connect.php');
+    $sql = "select * from tb_most_searched_cars";
+    $result = mysqli_query($con, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+      $id = $row['id'];
+      $name = $row['carName'];
+      $price = $row['price'];
+      $category = $row['category'];
+      $image = $row['image'];
+      echo 
+      '<div class="card car-card" style="width: 15rem;">
+      <img src=./admin/admin_models/'.$image.' class="card-img-top" alt='.$image.'">
         <div class="card-body">
-          <p id="car-name" class="card-text">Mercedes M5</p>
-          <p id="car-price" class="card-title">₹ 12,00,000</p>
+          <p id="car-name" class="card-text">' . $name . ' (' . $category . ')</p>
+          <p id="car-price" class="card-title">' . $price . '</p>
           <a href="#" class="btn btn-primary">Get Offers</a>
         </div>
-      </div>
-    <?php } ?>
+      </div>';
+    }
+    ?>
   </div>
 </div>
 
 <div class="display_slider">
   <h4>Latest Cars</h4>
   <div class="slider_section">
-    <?php
-    for ($x = 0; $x <= 6; $x++) { ?>
-      <div class="card car-card" style="width: 15rem;">
-        <img src="./resources/images/car_1.jpg" class="card-img-top" alt="car 1">
+  <?php
+    include('./config/connect.php');
+    $sql = "select * from tb_latest_cars";
+    $result = mysqli_query($con, $sql);
+    while ($row = mysqli_fetch_assoc($result)) {
+      $id = $row['id'];
+      $name = $row['carName'];
+      $price = $row['price'];
+      $category = $row['category'];
+      $image = $row['image'];
+      echo 
+      '<div class="card car-card" style="width: 15rem;">
+      <img src=./admin/admin_models/'.$image.' class="card-img-top" alt='.$image.'">
         <div class="card-body">
-          <p id="car-name" class="card-text">Mercedes M5</p>
-          <p id="car-price" class="card-title">₹ 12,00,000</p>
+          <p id="car-name" class="card-text">' . $name . ' (' . $category . ')</p>
+          <p id="car-price" class="card-title">' . $price . '</p>
           <a href="#" class="btn btn-primary">Get Offers</a>
         </div>
-      </div>
-    <?php } ?>
+      </div>';
+    }
+    ?>
   </div>
 </div>
