@@ -45,8 +45,11 @@
           </div>
           <div class="col-md-4">
             <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
+            <select id="inputState" class="form-select" name="state">
               <option selected>Choose...</option>
+              <option value="delhi">Delhi</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="chennai">Chennai</option>
               <option>...</option>
             </select>
           </div>
@@ -58,20 +61,20 @@
         <fieldset class="row mb-3">
           <legend class="col-form-label col-sm-4 pt-0">Choose car categories</legend>
           <div class="col-sm-8">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar1" value="hatchback">
+          <div class="form-check">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar1" value="hatchback">
               <label class="form-check-label" for="chooseCar1">
                 Hatchback
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar2" value="sadan">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar2" value="sadan">
               <label class="form-check-label" for="chooseCar2">
                 Sadan
               </label>
             </div>
             <div class="form-check disabled">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar3" value="SUV">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar3" value="SUV">
               <label class="form-check-label" for="chooseCar3">
                 SUV
               </label>

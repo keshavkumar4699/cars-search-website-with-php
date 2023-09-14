@@ -7,6 +7,6 @@ $result = mysqli_query($con, $sql);
 if(!$result){
   die(mysqli_error($con));
 } else {
-  header('location: ../user-list.php');
+  header('location: ../admin/user-list.php');
 }
 ?>

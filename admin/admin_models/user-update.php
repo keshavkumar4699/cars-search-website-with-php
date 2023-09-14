@@ -21,16 +21,17 @@ if(isset($_POST['update'])){
   $email = $_POST['email'];
   $address = $_POST['address'];
   $city = $_POST['city'];
-  // $state = $_POST['state'];
+  $state = $_POST['state'];
   $zip = $_POST['zip'];
-  // $carCategories = $_POST['car_category'];
+  $categories = $_POST['chooseCategory'];
+  $allCategories=implode(",", $categories);
 
-  $sql="update tb_user set name='$name', phone='$phone', email='$email', address='$address', city='$city', zip='$zip' where id=$id";
+  $sql="update tb_user set name='$name', phone='$phone', email='$email', address='$address', city='$city', state='$state', zip='$zip', car_category='$allCategories' where id=$id";
   $result=mysqli_query($con, $sql);
   if(!$result){
     die(mysqli_error($con));
   } else {
-    header('location: ../user-list.php');
+    header('location:../admin/user-list.php');
   }
 }
 
