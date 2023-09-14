@@ -34,7 +34,7 @@
         //select query
         $sql = "select * from tb_user";
         $result = mysqli_query($con, $sql);
-        $row=0;
+        $count=1;
         while ($row = mysqli_fetch_assoc($result)) {
           $id = $row['id'];
           $name = $row['name'];
@@ -47,7 +47,7 @@
           $carCategories = $row['car_category'];
           echo 
           '<tr>
-            <th scope="row">'.$id.'</th>
+            <th scope="row">'.$count.'</th>
             <td>'.$name.'</td>
             <td>'.$phone.'</td>
             <td>'.$email.'</td>
@@ -61,6 +61,7 @@
           </tr>';
           // <!--<td>'.$state.'</td>-->
           // <!---->
+          $count++;
         }
         ?>
       </tbody>

@@ -38,6 +38,7 @@ include('./admin_config/connect.php');
           include('./admin_config/connect.php');
           $sql = "select * from tb_most_searched_cars";
           $result = mysqli_query($con, $sql);
+          $count=1;
           while($row=mysqli_fetch_assoc($result)){
             $id=$row['id'];
             $name=$row['carName'];
@@ -45,13 +46,14 @@ include('./admin_config/connect.php');
             $category=$row['category'];
             $image=$row['image'];
             echo '<tr>
-              <th scope="row">'.$id.'</th>
+              <th scope="row">'.$count.'</th>
               <td>'.$name.'</td>
               <td>'.$price.'</td>
               <td>'.$category.'</td>
               <td><img class="h-25 w-25" src=./resources/'.$image.' alt='.$image.'/></td>
               <td><a href="./admin_models/delete-mostsearched.php?deleteid='.$id.'" class="btn btn-danger">Delete</a></td>
             </tr>';
+            $count++;
           }
         ?>
       </tbody>

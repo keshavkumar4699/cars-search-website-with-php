@@ -34,6 +34,7 @@
           include('./admin_config/connect.php');
           $sql = "select * from tb_latest_cars";
           $result = mysqli_query($con, $sql);
+          $count=1;
           while($row=mysqli_fetch_assoc($result)){
             $id=$row['id'];
             $name=$row['carName'];
@@ -41,7 +42,7 @@
             $category=$row['category'];
             $image=$row['image'];
             echo '<tr>
-              <th scope="row">'.$id.'</th>
+              <th scope="row">'.$count.'</th>
               <td>'.$name.'</td>
               <td>'.$price.'</td>
               <td>'.$category.'</td>

@@ -12,13 +12,22 @@
       include('./config/connect.php');
       $sql = "select * from tb_banner_images";
       $result = mysqli_query($con, $sql);
+      $count=0;
       while ($row = mysqli_fetch_assoc($result)) {
         $id = $row['id'];
         $image = $row['image'];
-        echo '
+        if($count===0){
+          echo '
             <div class="carousel-item active">
               <img src=./admin/admin_models/' . $image . ' alt=' . $image . ' class="d-block w-100">
             </div>';
+        } else {
+          echo '
+            <div class="carousel-item">
+              <img src=./admin/admin_models/' . $image . ' alt=' . $image . ' class="d-block w-100">
+            </div>';
+        }
+        $count++;
       }
       ?>
       <!-- <div class="carousel-item active">

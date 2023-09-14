@@ -36,14 +36,16 @@
           include('./admin_config/connect.php');
           $sql = "select * from tb_banner_images";
           $result = mysqli_query($con, $sql);
+          $count=1;
           while($row=mysqli_fetch_assoc($result)){
             $id=$row['id'];
             $image=$row['image'];
             echo '<tr>
-              <th scope="row">'.$id.'</th>
+              <th scope="row">'.$count.'</th>
               <td><img class="h-25 w-25" src=./resources/'.$image.' alt='.$image.'/></td>
               <td><a href="./admin_models/banner_deletion.php?deleteid='.$id.'" class="btn btn-danger">Delete</a></td>
             </tr>';
+            $count++;
           }
         ?>
       </tbody>

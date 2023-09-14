@@ -17,7 +17,7 @@
         </ul>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="/carsden/admin/">Admin</a>
+            <a class="nav-link fw-bold" aria-current="page" href="/carsden/admin/">Admin</a>
           </li>
         </ul>
       </div>
