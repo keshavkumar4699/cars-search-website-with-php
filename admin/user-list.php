@@ -44,7 +44,7 @@
           $city = $row['city'];
           // $state = $row['state'];
           $zip = $row['zip'];
-          // $carCategories = $row['car_category'];
+          $carCategories = $row['car_category'];
           echo 
           '<tr>
             <th scope="row">'.$id.'</th>
@@ -55,12 +55,12 @@
             <td>'.$city.'</td>
             <td></td>
             <td>'.$zip.'</td>
-            <td></td>
+            <td>'.$carCategories.'</td>
             <td><a href="update.php?updateid='.$id.'" class="btn btn-success">Update</a></td>
             <td><a href="./admin_models/user-deletion.php?deleteid='.$id.'" class="btn btn-danger">Delete</a></td>
           </tr>';
           // <!--<td>'.$state.'</td>-->
-          // <!--<td>'.$carCategories.'</td>-->
+          // <!---->
         }
         ?>
       </tbody>

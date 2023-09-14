@@ -6,12 +6,13 @@ if(isset($_POST['submit']) && !empty($_POST['submit'])) {
   $email = $_POST['email'];
   $address = $_POST['address'];
   $city = $_POST['city'];
-  // $state = $_POST['state'];
+  $state = $_POST['state'];
   $zip = $_POST['zip'];
-  // $state = $_POST['state'];
+  $categories = $_POST['chooseCategory'];
+  $allCategories=implode(",", $categories);
 
   //insert query
-  $sql = "insert into tb_user (name, phone, email, address, city, zip) values ('$name','$phone','$email','$address','$city','$zip')";
+  $sql = "insert into tb_user (name, phone, email, address, city, state, zip, car_category) values ('$name','$phone','$email','$address','$city','$state','$zip', '$allCategories')";
   
 
   $result = mysqli_query($con, $sql);

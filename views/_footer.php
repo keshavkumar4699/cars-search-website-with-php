@@ -79,6 +79,9 @@
           <p>
             <a href="#!" class="text-reset">Help</a>
           </p>
+          <p>
+            <a href="./admin" class="text-reset">Admin</a>
+          </p>
         </div>
         <!-- Grid column -->
 

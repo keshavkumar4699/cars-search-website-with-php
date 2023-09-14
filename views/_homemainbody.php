@@ -65,10 +65,12 @@
             <input type="text" class="form-control" id="city" name="city">
           </div>
           <div class="col-md-4">
-            <label for="inputState" class="form-label">State</label>
-            <select id="inputState" class="form-select">
+            <label for="state" class="form-label">State</label>
+            <select id="state" name="state" class="form-select">
               <option selected>Choose...</option>
-              <option>...</option>
+              <option value="delhi">Delhi</option>
+              <option value="mumbai">Mumbai</option>
+              <option value="chennai">Chennai</option>
             </select>
           </div>
           <div class="col-md-2">
@@ -80,19 +82,19 @@
           <legend class="col-form-label col-sm-4 pt-0">Choose car categories</legend>
           <div class="col-sm-8">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar1" value="hatchback">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar1" value="hatchback">
               <label class="form-check-label" for="chooseCar1">
                 Hatchback
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar2" value="sadan">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar2" value="sadan">
               <label class="form-check-label" for="chooseCar2">
                 Sadan
               </label>
             </div>
             <div class="form-check disabled">
-              <input class="form-check-input" type="checkbox" name="chooseCar[]" id="chooseCar3" value="SUV">
+              <input class="form-check-input" type="checkbox" name="chooseCategory[]" id="chooseCar3" value="SUV">
               <label class="form-check-label" for="chooseCar3">
                 SUV
               </label>
