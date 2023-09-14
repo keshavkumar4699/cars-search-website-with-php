@@ -12,7 +12,11 @@
 
 <body>
   <h3 class="text-center mt-5">Upload Latest Car</h3>
-  <?php include('./admin_views/add-new-car.php') ?>
+  <div class="container mt-5 text-center">
+    <form>
+      <?php include('./admin_views/add-new-car.php') ?>
+    </form>
+  </div>
   <div>
     <table class="table table-hover">
       <thead>

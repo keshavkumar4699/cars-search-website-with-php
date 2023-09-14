@@ -13,12 +13,12 @@
 <body>
   <h3 class="text-center mt-5">Upload new Banner Image</h3>
   <div class="container mt-5 text-center">
-    <form class="row g-3">
+    <form class="row g-3" action="./admin_models/add-banner.php" method="post" enctype="multipart/form-data">
       <div class="mb-3 col-9">
-        <input class="form-control" type="file" id="formFileMultiple" multiple>
+        <input class="form-control" type="file" id="bannerImage" name="bannerImage">
       </div>
       <div class="col-3">
-        <button type="submit" class="btn btn-primary mb-3">Upload Banner</button>
+        <button type="submit" class="btn btn-primary mb-3" name="submit">Upload Banner</button>
       </div>
     </form>
   </div>
@@ -27,19 +27,24 @@
       <thead>
         <tr>
           <th scope="col">#</th>
-          <th scope="col">Banner</th>
-          <th scope="col">BannerName</th>
+          <th scope="col" class="col-9 text-center">Banner</th>
           <th scope="col">Operations</th>
         </tr>
       </thead>
       <tbody>
         <?php
-
-        return '<tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-          </tr>'
+          include('./admin_config/connect.php');
+          $sql = "select * from tb_banner_images";
+          $result = mysqli_query($con, $sql);
+          while($row=mysqli_fetch_assoc($result)){
+            $id=$row['id'];
+            $image=$row['image'];
+            echo '<tr>
+              <th scope="row">'.$id.'</th>
+              <td><img class="h-25 w-25" src=./resources/'.$image.' alt='.$image.'/></td>
+              <td><a href="./admin_models/banner_deletion.php?deleteid='.$id.'" class="btn btn-danger">Delete</a></td>
+            </tr>';
+          }
         ?>
       </tbody>
     </table>

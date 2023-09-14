@@ -1,5 +1,5 @@
 <?php
-  include('./admin_config/connect.php');
+include('./admin_config/connect.php');
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,11 @@
 
 <body>
   <h3 class="text-center mt-5">Upload new most searched Car</h3>
-  <?php include('./admin_views/add-new-car.php') ?>
+  <div class="container mt-5 text-center">
+    <form >
+      <?php include('./admin_views/add-new-car.php') ?>
+    </form>
+  </div>
   <div>
     <table class="table table-hover">
       <thead>
@@ -31,7 +35,7 @@
       </thead>
       <tbody>
         <?php
-        
+
         return '<tr>
             <th scope="row">1</th>
             <td>Mark</td>

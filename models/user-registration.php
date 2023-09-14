@@ -26,3 +26,4 @@ if(isset($_POST['submit']) && !empty($_POST['submit'])) {
   echo "error";
   exit;
 }
+?>
