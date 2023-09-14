@@ -12,13 +12,13 @@
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="./resources/images/banner_1.jpg" class="d-block w-100" alt="...">
+          <img src="./resources/images/banner_images/banner_1.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./resources/images/banner_2.jpg" class="d-block w-100" alt="...">
+          <img src="./resources/images/banner_images/banner_2.jpg" class="d-block w-100" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="./resources/images/banner_3.jpg" class="d-block w-100" alt="...">
+          <img src="./resources/images/banner_images/banner_3.jpg" class="d-block w-100" alt="...">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -112,7 +112,7 @@
       <?php
       for ($x = 0; $x <= 6; $x++) { ?>
       <div class="card car-card" style="width: 15rem;">
-        <img src="./resources/images/car_1.jpg" class="card-img-top" alt="car 1">
+        <img src="./resources/images/latest_cars/car_1.jpg" class="card-img-top" alt="car 1">
         <div class="card-body">
           <p id="car-name" class="card-text">Mercedes M5</p>
           <p id="car-price" class="card-title">₹ 12,00,000</p>

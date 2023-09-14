@@ -15,8 +15,9 @@
   <div class="container">
     <div class="list-group">
       <button type="button" class="list-group-item list-group-item-action" onclick="location.href='user-list.php'">Manage User</button>
-      <button type="button" class="list-group-item list-group-item-action">Manage Latest Cars</button>
-      <button type="button" class="list-group-item list-group-item-action">Most Searched Cars</button>
+      <button type="button" class="list-group-item list-group-item-action" onclick="location.href='addBanner.php'">Manage Banners</button>
+      <button type="button" class="list-group-item list-group-item-action" onclick="location.href='addLatestCar.php'">Manage Latest Cars</button>
+      <button type="button" class="list-group-item list-group-item-action" onclick="location.href='addMostSearchedCar.php'">Most Searched Cars</button>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
