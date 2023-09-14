@@ -34,7 +34,7 @@
     </div>
     <!-- form -->
     <div id="banner-form">
-      <form action="../views/user-registration.php" method="post">
+      <form action="./models/user-registration.php" method="post">
         <div class="row mb-3">
           <label for="name" class="col-sm-2 col-form-label">Name</label>
           <div class="col-sm-10">

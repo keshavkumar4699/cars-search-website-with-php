@@ -16,7 +16,7 @@ if(isset($_POST['submit']) && !empty($_POST['submit'])) {
 
   $result = mysqli_query($con, $sql);
   if ($result) {
-    header('Location: ' . $_SERVER['HTTP_REFERER']);
+    header('location:' . $_SERVER['HTTP_REFERER']);
     exit;
   } else {
     die(mysqli_error("error" + $con));
